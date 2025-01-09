@@ -23,6 +23,11 @@ mongoose
     console.log(err);
   });
 
+//root
+app.get('/', (req, res) => {
+  res.status(200).json("connection succesful");
+});
+
 // Signup
 app.post("/api/signup", async (req, res) => {
   const { name, email, username, password } = req.body;
